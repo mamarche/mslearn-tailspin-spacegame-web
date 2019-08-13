@@ -3,6 +3,14 @@ pool:
   demands:
     - npm
 
+trigger:
+  branches:
+    include:
+    - '*'     # build all branches
+  paths:
+    exclude:
+    - docs/*  # exclude the docs folder
+
 variables:
   buildConfiguration: 'Release'
   wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
